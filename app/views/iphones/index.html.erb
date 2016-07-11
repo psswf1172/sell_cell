@@ -1,0 +1,29 @@
+<div class="iphones">
+	<div class="container">
+		<div class="row center">
+				
+			<h1>Choose your iPhone</h1>
+				<div class="img-device">
+					<div class="col-md-4">
+						<%=@devices.where(name:'6s Plus').each do |sixPlus| %>">
+						<a href="/devices/iphones/<%=sixPlus.where(name: '6s Plus')%>">	
+							<img src="<%=iPhone.image%>">
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="/devices/<%=@devices.where(model:'iPad')%>">
+							<img src="<%=@devices.find{|i| i.model == 'iPad'}.image%>">
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="/devices/<%=@devices.where(model:'Galaxy')%>">
+							<img src="<%=@devices.find{|i| i.model == 'Galaxy'}.image%>">
+						</a>
+					</div>
+					
+				</div> <!-- /img-device -->
+			</div> <!-- /col-md-6 col-xs-12 -->
+
+		</div> <!-- /row center -->
+	</div> <!-- /container -->
+</div> <!-- /device -->
