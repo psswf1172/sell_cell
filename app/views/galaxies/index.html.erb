@@ -1,0 +1,18 @@
+<div class="galaxies">
+	<div class="container">
+		<div class="row center">
+
+		<h1>Choose your Galaxy device</h1>
+			<div class="img-galaxies">
+				<% @galaxies.group(:name).each do |g| %>
+					<div class="col-md-4">
+						<a href="/galaxies/<%=g.id%>">
+							<img src="<%=g.image%>">
+							<h4><%=g.name%></h4>
+						</a>
+					</div> <!-- /col-md-4 -->
+				<% end %>
+			</div> <!-- img-galaxys -->
+		</div> <!-- /row center -->
+	</div> <!-- /container -->
+</div> <!-- /device -->

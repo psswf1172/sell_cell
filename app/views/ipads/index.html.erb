@@ -1,18 +1,18 @@
-<div class="iphones">
+<div class="ipads">
 	<div class="container">
 		<div class="row center">
 
-		<h1>Choose your iPhone</h1>
-			<div class="img-iphones">
-				<% @iphones.group(:name).each do |i| %>
+		<h1>Choose your iPad</h1>
+			<div class="img-ipads">
+				<% @ipads.group(:name).each do |i| %>
 					<div class="col-md-4">
-						<a href="/iphones/<%=i.id%>">
+						<a href="/ipads/<%=i.id%>">
 							<img src="<%=i.image%>">
 							<h4><%=i.name%></h4>
 						</a>
 					</div> <!-- /col-md-4 -->
 				<% end %>
-			</div> <!-- img-iphones -->
+			</div> <!-- img-ipads -->
 		</div> <!-- /row center -->
 	</div> <!-- /container -->
 </div> <!-- /device -->

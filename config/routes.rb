@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'devices/index'
 
   resources :devices
-  resources :galaxys
+  resources :galaxies
   resources :iphones
   resources :ipads
 

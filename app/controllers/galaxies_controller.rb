@@ -1,4 +1,4 @@
-class GalaxysController < ApplicationController
+class GalaxiesController < ApplicationController
 
 	def index
 		@galaxies = Galaxy.all
