@@ -8,7 +8,7 @@
   <meta name="description" content="Get CASH for your cell -- only in NYC, only with CellSale!">
   <meta name="author" content="Ethan Steiner, Jen Abella">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
@@ -18,7 +18,7 @@
 
 </head>
 <body>
-  <div id="wrapper">
+  <div id="wrapper flex-container">
     <div id="header">
     	<%= render 'layouts/header' %>
     </div>
@@ -33,7 +33,10 @@
   	<%= render 'layouts/footer' %>
     </div>
 
-  </div> <!--wrapper-->
+  </div> <!--wrapper flex-container-->
 </body>
+<script>
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
 </html>
 

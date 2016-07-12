@@ -2,47 +2,144 @@
 	<div class="container">
 		<div class="row center">
 
-			<h2>Select your network, memory size and condition</h2>
+			<h2>Select your network, memory size and condition:</h2>
 			<div class="network">
 				<div class="col-md-4">
 					<div class="dropdown">
-						<button class="dropbtn">Network</button>
-							<div class="dropdown-content">
-								<a href="#"><img src="/images/att-svg.png" width="50"></a>
-								<a href="#"><img src="/images/verizon-svg.png" width="50"></a>
-								<a href="#"><img src="/images/sprint-svg.png" width="50"></a>
-								<a href="#"><img src="/images/tmobile-svg.png" width="50"></a>
-								<a href="#"><img src="/images/wireless-svg.png" width="50"></a>
+						<button id="network-button" class="dropbtn">Network</button>
+							<div class="dropdown-content" >
+								<a id="att-logo" href="#"><img src="/images/att-svg.png" width="50"></a>
+								<a id="verizon-logo" href="#"><img src="/images/verizon-svg.png" width="50"></a>
+								<a id="sprint-logo" href="#"><img src="/images/sprint-svg.png" width="50"></a>
+								<a id="tmobile-logo" href="#"><img src="/images/tmobile-svg.png" width="50"></a>
+								<a id="wireless-logo" href="#"><img src="/images/wireless-svg.png" width="50"></a>
 							</div> <!-- dropdown-content -->
-					</div> <!-- dropdown -->
+						</div> <!-- dropdown -->
+						<div id="logo-selected">
+							<img hidden id="att" src="/images/att-svg.png" width="150">
+							<img hidden id="verizon" src="/images/verizon-svg.png" width="150">
+							<img hidden id="sprint" src="/images/sprint-svg.png" width="150">
+							<img hidden id="tmobile" src="/images/tmobile-svg.png" width="150">
+							<img hidden id="wireless" src="/images/wireless-svg.png" width="100">
+						</div> <!-- logo-selected -->
+					
+						<script>
+							$(document).ready(function(){
+								$("a#att-logo").click(function(){
+			  						event.preventDefault();
+			  						$("#network-button").hide();
+			  						$("img#att").show();
+  								});
+								$("a#verizon-logo").click(function(){
+			  						event.preventDefault();
+			  						$("#network-button").hide();
+			  						$("img#verizon").show();
+  								});
+								$("a#sprint-logo").click(function(){
+			  						event.preventDefault();
+			  						$("#network-button").hide();
+			  						$("img#sprint").show();
+  								});
+								$("a#tmobile-logo").click(function(){
+			  						event.preventDefault();
+			  						$("#network-button").hide();
+			  						$("img#tmobile").show();
+  								});
+								$("a#wireless-logo").click(function(){
+			  						event.preventDefault();
+			  						$("#network-button").hide();
+			  						$("img#wireless").show();
+  								});				
+							});
+						</script>
 				</div> <!-- col -->
 			</div> <!-- network -->
 
 			<div class="memory">
 				<div class="col-md-4">
 					<div class="dropdown">
-						<button class="dropbtn">Memory</button>
+						<button id="memory-button" class="dropbtn">Memory</button>
 							<div class="dropdown-content">
-								<a href="#">8GB</a>
-								<a href="#">16GB</a>
-								<a href="#">32GB</a>
-								<a href="#">64GB</a>
-								<a href="#">128GB</a>
+								<a id="eight" href="#">8GB</a>
+								<a id="sixteen" href="#">16GB</a>
+								<a id="thirty-two" href="#">32GB</a>
+								<a id="sixty-four" href="#">64GB</a>
+								<a id="one-hundred-eight" href="#">128GB</a>
 							</div> <!-- dropdown-content -->
-					</div> <!-- dropdown -->	
+					</div> <!-- dropdown -->
+						<div class="memory-selected">
+							<h2 hidden id="8gb">8GB</h2>
+							<h2 hidden id="16gb">16GB</h2>
+							<h2 hidden id="32gb">32GB</h2>
+							<h2 hidden id="64gb">64GB</h2>
+							<h2 hidden id="128gb">128GB</h2>
+						</div> <!-- memory-selected -->	
+					<script>
+							$(document).ready(function(){
+								$("a#eight").click(function(){
+			  						event.preventDefault();
+			  						$("#memory-button").hide();
+			  						$("h2#8gb").show();
+  								});
+								$("a#sixteen").click(function(){
+			  						event.preventDefault();
+			  						$("#memory-button").hide();
+			  						$("h2#16gb").show();
+  								});
+								$("a#thirty-two").click(function(){
+			  						event.preventDefault();
+			  						$("#memory-button").hide();
+			  						$("h2#32gb").show();
+  								});
+								$("a#sixty-four").click(function(){
+			  						event.preventDefault();
+			  						$("#memory-button").hide();
+			  						$("h2#64gb").show();
+  								});
+								$("a#one-hundred-eight").click(function(){
+			  						event.preventDefault();
+			  						$("#memory-button").hide();
+			  						$("h2#128gb").show();
+  								});				
+							});
+						</script>
 				</div> <!-- col -->
 			</div> <!-- memory -->
 
 			<div class="condition">
 				<div class="col-md-4">
 					<div class="dropdown">
-						<button class="dropbtn">Condition</button>
+						<button id="condition-button" class="dropbtn">Condition</button>
 							<div class="dropdown-content">
-								<a href="#">Normal</a>
-								<a href="#">Broken</a>
-								<a href="#">Without Power</a>
+								<a id="normal" href="#">Normal</a>
+								<a id="broken" href="#">Broken</a>
+								<a id="without-power" href="#">Without Power</a>
 							</div> <!-- dropdown-content -->
-					</div> <!-- dropdown -->					
+					</div> <!-- dropdown -->
+						<div class="condition-selected">
+							<h2 hidden id="normal">Normal</h2>
+							<h2 hidden id="broken">Broken</h2>
+							<h2 hidden id="without-power">Without power</h2>
+						</div> <!-- condition-selected -->			
+						<script>
+							$(document).ready(function(){
+								$("a#normal").click(function(){
+			  						event.preventDefault();
+			  						$("#condition-button").hide();
+			  						$("h2#normal").show();
+  								});
+								$("a#broken").click(function(){
+			  						event.preventDefault();
+			  						$("#condition-button").hide();
+			  						$("h2#broken").show();
+  								});
+								$("a#without-power").click(function(){
+			  						event.preventDefault();
+			  						$("#condition-button").hide();
+			  						$("h2#without-power").show();
+  								});
+							});
+						</script>	
 				</div> <!-- col -->	
 			</div> <!-- condition -->
 		</div> <!-- /row center -->
@@ -51,8 +148,8 @@
 	<div class="container">
 		<div class="price">
 			<div class="row center">
-				<h2>Your Galaxy is worth:</h2>
-				<h1>$ <% [1,2,3,4,5].sample %></h1>
+				<h2>Your Galaxy <%=@galaxy.name %> is worth:</h2>
+				<h1>$ <%= @galaxy.price_cents/100 %></h1>
 			</div> <!-- row center -->
 		</div><!-- price -->
 	</div> <!-- container -->
